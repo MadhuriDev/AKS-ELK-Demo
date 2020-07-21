@@ -75,7 +75,7 @@ node {
     }
     stage('Deploy apache web server') { // for display purposes
         sh "kubectl apply -f /var/lib/jenkins/elk-apps/new_elk/apache.yaml"
-        sleep 30
+        sleep 20
     }
 }
 
