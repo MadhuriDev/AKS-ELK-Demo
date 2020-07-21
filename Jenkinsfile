@@ -40,10 +40,11 @@ node {
 }*/
     stage('Preparation') { // for display purposes
        
-        /*sh "az aks get-credentials --resource-group azkubernetes --name gitops-demo-aks"*/
+        
         sh "pwd"
         sh "whoami"
         sh "/snap/bin/kubectl version --short --client"
+        sh "az aks get-credentials --resource-group azkubernetes --name gitops-demo-aks"
         sh "/snap/bin/kubectl get nodes"
     }
     stage('Deploy and Configure Elasticsearch ') { // for display purposes
